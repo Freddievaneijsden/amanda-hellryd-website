@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-/* COLORS */
+/* ===============================
+   COLORS
+=================================*/
+
 .text-primary {
   color: #4a4a4a;
 }
@@ -14,38 +17,51 @@
   background-color: #e6e4e1;
 }
 
-/* LAYOUT */
+/* ===============================
+   BASE
+=================================*/
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+}
+
+h2, h1 {
+  font-family: Merriweather;
+}
+
+h1 {
+  font-size: 1.5rem;      
+  font-weight: 300;   
+  letter-spacing: 0.05em;    
+  white-space: nowrap;  
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, 
+input:hover, 
+.social-list a:hover {
+  color: #7f7f77; 
+}
+
+/* ===============================
+   LAYOUT
+=================================*/
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   margin: 0 10%;
-}
-
-.grid-container img {
-  width: 100%;
-}
-
-.artwork-image-full{
-    margin: 0 2%;
-}
-
-.artwork-image-split{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  margin: 0 2%;
-}
-
-.artwork-image-full img{
-   width: 100%;
-   margin-bottom: 20px;
-}
-
-.artwork-image-split img{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
 }
 
 .merits-container{
@@ -55,6 +71,47 @@
   margin: 0 10%;
 }
 
+/* ===============================
+   COMPONENTS
+=================================*/
+
+/* Artwork (base + modifiers) */
+.artwork {
+  margin: 0 2%;
+}
+
+.artwork img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.artwork--split {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.artwork--full img {
+  margin-bottom: 20px;
+}
+
+/* Merits */
+.merits-title {
+  color: #4a4a4a;
+  margin: 5% 15% 0 ;
+}
+
+.merits-list { 
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.merits-list time, 
+p time {
+  color: #4a4a4a;
+}
+
+/* Forms */
 form {
    max-width: 400px;
    padding: 3rem;
@@ -64,69 +121,9 @@ form {
    text-align: center;
 }
 
-.news-feed{
-  max-height: 25rem;
-  overflow-y: auto;
-  padding-right: 0.5em;
-}
-
-/* FONTS */
-body {
-  font-family: "Nunito Sans", sans-serif;
-  line-height: 1.6;
-}
-
-h1 {
-  font-family: Merriweather;
-  font-size: 1.5rem;      
-  font-weight: 300;   
-  letter-spacing: 0.05em;    
-  white-space: nowrap;  
-}
-
-h2 {
-  font-family: Merriweather;
-}
-
-img {
-  border-radius: 0.5%;
-}
-
-.merits-list time, p time {
-  color: #4a4a4a;
-}
-
-
-.title-time time {
-  font-size: 1.2rem;
-  font-weight: 400; 
-  color: #7f7f77;
-  font-family: Nunito Sans;
-}
-
-/* LINKS */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover, input:hover, .social-list a:hover {
-  color: #7f7f77; 
-}
-
 input {
   font-size: 1rem;
   color: inherit;
-}
-
-main img:hover{
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.social-list a {
-  font-size: 1.8rem;
-  color: #4a4a4a;
 }
 
 input[type="email"],
@@ -159,13 +156,15 @@ input[type="submit"]:hover {
   color: #7f7f77; 
 }
 
-/* CONTENT */
-article {
-  max-width: 800px;
-  margin-left: 5%;
+/* News Feed */
+.news-feed{
+  max-height: 25rem;
+  overflow-y: auto;
+  padding-right: 0.5em;
 }
 
-/* LISTS */
+/* Navigation */
+
 ul {
   list-style: none;   
 }
@@ -174,7 +173,7 @@ ul {
   font-size: 1rem;
   display: flex;            
   flex-direction: column; 
-  margin: 15% 15% 0;
+  margin: 0% 15% 0;
   padding-bottom: 3%;
   color: #4a4a4a;
 }
@@ -187,7 +186,6 @@ ul {
 
 .svg-arrow {
   display: flex;  
-  flex-direction: row; 
   justify-content: space-between;
   margin: 5% 10% 0;
 }
@@ -197,28 +195,50 @@ ul {
   margin-left: -3em;
 }
 
-.merits-title {
-  color: #4a4a4a;
-  margin: 5% 15% 0 ;
-}
-
-.merits-list { 
-  margin-top: 3%;
-  margin-left: 3%;
-}
-
+/* Social */
 .social-list {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
 
-/* FOOTER */
-footer {
-  margin: 15% 0 10%
+.social-list a {
+  font-size: 1.8rem;
+  color: #4a4a4a;
 }
 
-/* MEDIA QUERIES */
+/* Dates */
+.title-time time {
+  font-size: 1.2rem;
+  font-weight: 400; 
+  color: #7f7f77;
+  font-family: Nunito Sans;
+}
+
+/* Articles */
+article {
+  max-width: 800px;
+  margin-left: 5%;
+}
+
+/* Footer */
+footer {
+  margin: 0% 0% 10%
+}
+
+/* ===============================
+   EFFECTS
+=================================*/
+
+main img:hover{
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* ===============================
+   MEDIA QUERIES
+=================================*/
+
 /* Tablet */
 @media screen and (min-width: 768px), (max-width: 1023px) and (orientation: landscape) {
  header { 
@@ -234,7 +254,7 @@ footer {
   width: 3.5em;
 }
   
-  .grid-container, .artwork-image-split {
+  .grid-container, .artwork--split {
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -269,7 +289,7 @@ form {
   grid-template-columns: repeat(3, 1fr);
 }
 
-  .artwork-image-split{
+  .artwork--split{
   grid-template-columns: repeat(2, 1fr);
 }
 
