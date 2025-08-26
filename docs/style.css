@@ -55,10 +55,6 @@
   margin: 0 10%;
 }
 
-header { 
-   margin: 10% 23% 0;
-}
-
 form {
    max-width: 400px;
    padding: 3rem;
@@ -98,6 +94,14 @@ img {
 
 .merits-list time, p time {
   color: #4a4a4a;
+}
+
+
+.title-time time {
+  font-size: 1rem;
+  font-weight: 400; 
+  color: #7f7f77;
+  font-family: Nunito Sans;
 }
 
 /* LINKS */
@@ -170,15 +174,27 @@ ul {
   font-size: 1rem;
   display: flex;            
   flex-direction: column; 
-  margin: 10% 15% 0;
+  margin: 15% 15% 0;
+  padding-bottom: 3%;
+  color: #4a4a4a;
 }
 
-.nav-next{
-  font-size: 1rem;
-  display: flex;            
-  flex-direction: column; 
-  text-align: right;
-  margin: 0 15% 0;
+.nav-border {
+  margin: 15% 15% 0;
+  border-bottom: 1.0px solid;
+ 
+}
+
+.svg-arrow {
+  display: flex;  
+  flex-direction: row; 
+  justify-content: space-between;
+  margin: 5% 10% 0;
+}
+
+.svg-arrow img {
+  width: 3em;
+  margin-left: -3em;
 }
 
 .merits-title {
@@ -214,8 +230,8 @@ footer {
     justify-content: space-between;
   }
 
-    .nav-next{
-  font-size: 1.1rem;
+  .svg-arrow img {
+  width: 3.5em;
 }
   
   .grid-container, .artwork-image-split {
@@ -229,6 +245,7 @@ footer {
 form {
    margin: 7% 5% 0;
 }
+
 }
 
 /* Desktop */
@@ -244,8 +261,8 @@ form {
     justify-content: space-between;
   }
 
-  .nav-next{
-  font-size: 1.2rem;
+  .svg-arrow img {
+  width: 4em;
 }
 
   .grid-container {
@@ -263,4 +280,5 @@ form {
 form {
    margin: 5% 5% 0;
 }
+
 }
