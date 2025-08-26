@@ -66,7 +66,7 @@
       </article>
     </section>
     <section>
-      <form action="/subscribe" class="text-primary">
+      <form action="/subscribe" class="text-primary" id="form">
         <h2>Newsletter</h2>
         <p>
           <label
@@ -76,6 +76,8 @@
               placeholder="your name"
               name="name"
               maxlength="100"
+              minlength="2"
+              id="name"
           /></label>
         </p>
         <p>
@@ -86,28 +88,26 @@
               placeholder="your email:"
               name="email"
               maxlength="100"
+              minlength="2"
               required
+              id="email"
           /></label>
         </p>
         <p>
           How often would you like updates?<br />
           <label
-            ><input type="radio" name="frequency" value="1" />1/month</label
+            ><input type="radio" name="frequency" value="month" />1/month</label
           >
           <label
-            ><input type="radio" name="frequency" value="6" />1/half year</label
+            ><input type="radio" name="frequency" value="half year" />1/half
+            year</label
           >
           <label
-            ><input type="radio" name="frequency" value="12" />1/year</label
-          >
-        </p>
-        <p>
-          <label
-            ><input type="checkbox" name="subscribe" checked="checked" /> Sign
-            me up for newsletter</label
+            ><input type="radio" name="frequency" value="year" />1/year</label
           >
         </p>
         <p><input type="submit" value="Submit" /></p>
+        <p id="output"></p>
       </form>
     </section>
     <footer class="text-primary">
@@ -124,5 +124,6 @@
         </li>
       </ul>
     </footer>
+    <script src="js/newsletter.js"></script>
   </body>
 </html>
