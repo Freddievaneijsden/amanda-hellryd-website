@@ -1,0 +1,16 @@
+{
+    "exhibitions": [
+        {   
+            "exhibitionTitle": "TEMPORAL STATE OF THE UNKNOWN",
+            "exhibitionLocation": "Tate Modern",
+            "exhibitionCity": "London",
+            "exhibitionDate": "2025-11-15"
+        },
+        {   
+            "exhibitionTitle": "CITY FRAGMENTS",
+            "exhibitionLocation": "Bonniers Konsthall",
+            "exhibitionCity": "Stockholm",
+            "exhibitionDate": "2026-07-28"
+        }
+    ]
+}
