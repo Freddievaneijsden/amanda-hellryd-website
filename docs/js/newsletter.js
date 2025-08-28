@@ -1,20 +1,56 @@
 const form = document.querySelector('#form');
 const output = document.querySelector('#output');
-const name = document.querySelector('#name');
-const email = document.querySelector('#email');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
 
 function showRegistration(event) {
     event.preventDefault();
 
-    const selected = document.querySelector('input[name="frequency"]:checked');
+    const selectedInput = document.querySelector('input[name="frequency"]:checked');
 
-     if (!selected) {
+     if (!selectedInput) {
         output.textContent = "Please select a newsletter frequency.";
         return;
     }
 
-    output.textContent = `${name.value}, I'll send my newsletter to ${email.value} once every ${selected.value}!`
+    saveRegistration(nameInput.value, emailInput.value, selectedInput.value);
+    getRegistration("registration");
+
+    output.textContent = `${nameInput.value}, I'll send my newsletter to ${emailInput.value} once every ${selectedInput.value}!`
 }
 
-form.addEventListener('submit', showRegistration)
+function saveRegistration(nameValue, emailValue, frequencyValue) {
+    const obj = {
+        name: nameValue,
+        email: emailValue,
+        selected: frequencyValue
+    };
+
+    const stringifiedObj = JSON.stringify(obj);
+    localStorage.setItem("registration", stringifiedObj);
+}
+
+function getRegistration(keyName) {
+    let getRegistrationObject = localStorage.getItem(keyName);
+    const parsedRegistration= JSON.parse(getRegistrationObject);
+
+    console.log(parsedRegistration);
+}
+
+function showNewsFeed() {
+    const newsFeed = document.querySelector(".news-feed");
+    const registration = localStorage.getItem("registration");
+
+    if (!registration) {
+      newsFeed.style.display = "none";
+    } else {
+      newsFeed.style.display = "block";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", showNewsFeed);
+form.addEventListener('submit', showRegistration, false)
+
+
+
 
