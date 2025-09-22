@@ -199,6 +199,7 @@ ul {
 .social-list {
   display: flex;
   justify-content: center;
+  margin: 15% 0%;
   gap: 2rem;
 }
 
@@ -263,6 +264,15 @@ form {
    margin: 7% 5% 0;
 }
 
+.social-list {
+  gap: 2.4rem;
+}
+
+.social-list a {
+  font-size: 2.0rem;
+}
+
+
 }
 
 /* Desktop */
@@ -291,6 +301,15 @@ form {
 
 form {
    margin: 5% 5% 0;
+}
+
+.social-list {
+  margin: 10% 0%;
+  gap: 2.7rem;
+}
+
+.social-list a {
+  font-size: 2.2rem;
 }
 
 }
