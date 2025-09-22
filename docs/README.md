@@ -2,4 +2,4 @@
 
 ## Live Site
 
-[https://freddievaneijsden.github.io/amanda-hellryd-website/]
+[https://amandahellryd.com/]
