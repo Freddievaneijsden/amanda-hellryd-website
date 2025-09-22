@@ -98,12 +98,19 @@ input:hover,
 /* Merits */
 .merits-title {
   color: #4a4a4a;
-  margin: 5% 15% 0 ;
+  max-width: 90%; 
+  
 }
 
 .merits-list { 
-  margin-top: 3%;
-  margin-left: 3%;
+  margin: 0 auto 1%;  
+  max-width: 90%;    
+  padding-left: 0; 
+}
+
+.selected-exhibitions {
+  margin: 2% auto 1%;  
+  max-width: 90%;      
 }
 
 .merits-list time, 
@@ -175,6 +182,7 @@ ul {
   flex-direction: column; 
   padding-bottom: 3%;
   color: #4a4a4a;
+  padding-left: 0; 
 }
 
 .nav-margin {
@@ -184,8 +192,6 @@ ul {
 .border {
    border-bottom: 1.0px solid;
 }
-
-.nav-border 
 
 .svg-arrow {
   display: flex;  
@@ -204,6 +210,7 @@ ul {
   justify-content: center;
   margin: 15% 0%;
   gap: 2rem;
+  padding-left: 0; 
 }
 
 .social-list a {
